@@ -15,18 +15,22 @@ import (
 	"path/filepath"
 )
 
-const parts1 = "│   "
-const parts2 = "    "
-const parts3 = "└──"
-const parts4 = "├──"
+const (
+	parts1 = "│   "
+	parts2 = "    "
+	parts3 = "└──"
+	parts4 = "├──"
+)
 
 type count struct {
 	FileCount int
 	DirCount  int
 }
 
-var showAll = flag.Bool("a", false, "Show all dir and files")
-var dirOnly = flag.Bool("d", false, "Show directory only")
+var (
+	showAll = flag.Bool("a", false, "Show all dir and files")
+	dirOnly = flag.Bool("d", false, "Show directory only")
+)
 
 func main() {
 	flag.Parse()
